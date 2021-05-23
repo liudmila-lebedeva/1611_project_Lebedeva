@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5c0f97cf66.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+           
+            
+            <!-- <div class="logo">LOGO</div> -->
+            <div class="menu">
+              <ul>
+                <div class="logo">
+                    
+                </div>
+                <li><a href="#gallery" class="scrollLink">GALLERY</a></li>
+                <li><a href="#information" class="scrollLink">INFO</a></li>
+                <li><a href="#to-go" class="scrollLink">TO GO</a></li>
+                <li><a href="#drink" class="scrollLink">WHERE TO DRINK</a></li>
+                <li><a href="#contact" class="scrollLink">CONTACT</a></li>
+                
+              </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    <h1 id="mainheader">Visit to Barcelona</h1>
+    
+
+    <div class="info">
+        <h1 id="gallery">GALLERY</h1>
+        
+        <div id="viewport">
+            <div id="container">
+                <img src="images/1.jpg" alt="" id="img1">
+                <img src="images/2.jpg" alt="" id="img2"> 
+            </div>
+            <div class="block-radio-buttons">
+                <input type="radio" class="radio-button" value="0" name="prim">
+                <input type="radio" class="radio-button" value="1" name="prim">
+                <input type="radio" class="radio-button" value="2" name="prim">
+                <input type="radio" class="radio-button" value="3" name="prim">
+                <input type="radio" class="radio-button" value="4" name="prim">
+            </div>     
+                
+        </div>
+    </div>
+        
+    
+
+    <div class="info">
+        <h1 id="information">Info</h1>
+        <div class="block">
+            
+            <h2 id="information">DO YOU LIKE BEACH HOLIDAY?</h2>
+            <h4>Whether you want to take the plunge or simply lounge in the Mediterranean sun, these are the very best Barcelona beaches</h4>
+            <img src="images/6.jpg" alt="" class="img_info">
+            <h4 onclick="show('one')" class="pointed">Read the information</h4>
+            <p class="p-hidden" id="one">Sagrada Família? La Rambla? Park Guëll? No – for most visitors, the top attraction in Barcelona is the weather, and with more than 300 days of sunny days a year and summers that are hot and humid, one of our favourite things to do is to take advantage of the city’s 4.5 kilometres of coastline, preferably with a dip in the Med. <br> Whether you’re a keen tanner or you prefer to find a shady spot and doze – or indeed you’re into your beach games and water sports – in summer you could happily spend the whole day a la playa here and not go home until the middle of the night. <br><br>Don’t know where to start? Our guide to the best Barcelona beaches has you covered.</p>
+        </div>
+
+        <div class="block">
+            <h2 class="info-title">Gastro Tours: Restaurants in Barcelona</h2>
+            <h4>Forget the three miles of golden, sandy beaches and Gaudí's splendid architecture: the number one reason to visit Barcelona is the food. </h4>
+            <img src="images/cafe.jpg" alt="" class="img_info">
+            <h4 onclick="show('two')" class="pointed">Read the information</h4>
+            <p class="p-hidden" id="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus officia commodi assumenda aspernatur fugit consequatur rem quas nostrum? Veritatis, quibusdam placeat <br> rerum perferendis ducimus cupiditate enim itaque autem molestias!Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus officia commodi assumenda<br><br> aspernatur fugit consequatur rem quas nostrum? Veritatis, quibusdam placeat rerum perferendis ducimus cupiditate enim itaque autem molestias!</p>
+        </div>
+
+        <div class="block">
+            <h2 class="info-title">the coolest hotels in Barcelona 2021</h2>
+            <h4>Want to sleep well and get a massage? Want to sleep and get a massage? Then choose the best hotels in Barcelona and lie on your bed, take a bath, order breakfast in your room.</h4>
+            <img src="images/hotel.jpg" alt="" class="img_info">
+            <h4 onclick="show('three')" class="pointed">Read the information</h4>
+            <p class="p-hidden" id="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus officia commodi assumenda aspernatur fugit consequatur rem quas nostrum? Veritatis, quibusdam placeat rerum perferendis ducimus cupiditate enim itaque autem molestias!Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus officia commodi assumenda aspernatur fugit consequatur rem quas nostrum? Veritatis, quibusdam placeat rerum perferendis ducimus cupiditate enim itaque autem molestias!</p>
+           
+        </div>
+    </div>
+
+    
+    
+
+    <div class="info">
+        
+        <div class="block">
+            <h1 id="to-go">WHERE TO DRINK</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid earum omnis neque id corrupti. Porro quae, est iure quas enim autem unde tenetur, ipsum nihil ut aut aperiam neque a!</p>
+        </div>
+        
+    </div>
+
+    <div class="info"  id="contact">
+        
+        <div class="block"></div>
+            <h1>Contact us, let's party together</h1>
+            <form method="get" onsubmit="return testForm(this)" action="http://lllc.lu">
+                First Name: <input name="fn" type="text"> <br>
+                Your email: <input name="email" type="email"><br>
+                How old are you: <input name="rep_password" type="rep_password"><br>
+
+                Write us, and let's meet in Barca
+
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit"class="form-button" value="send" >
+                
+            </form>
+    
+        </div>
+        
+    </div>
+
+        
+  
+
+    <div id="footer">
+        <div class="info">
+            <h3 id="contact">Contact us, let's party together</h3>
+            <div class="menu-footer">
+                <ul >
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="#information">info</a></li>
+                    <li><a href="#to-go">to go</a></li>
+                    <li><a href="#drink">where to drink</a></li>
+                </ul>
+            </div>
+            
+
+            <div class="icons">
+                <img src="images/youtube.png" alt="">
+                <img src="images/fb.png" alt="">
+                <img src="images/tk.png" alt="">
+            </div>
+              
+              
+        </div>
+        
+    </div>
+
+    
+
+<!-- <button onclick="anim()">Animate</button> -->
+
+
+<script src="script.js"></script>
+      
+</body>
+</html>
