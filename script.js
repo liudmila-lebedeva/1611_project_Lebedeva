@@ -101,12 +101,35 @@ function show(what) {  //what = parameter
 // ==== form ===
 
 function testForm(obj) {
-  var is_ok = true;
+  var send = true;
 
-  
-  if (obj.value == '') {
-    alert('hello');
+
+  if (obj.name.value == '') {
+    alert('Enter your name, please');
+    send = false;
   }
+
+  if (obj.email.value == '') {
+    alert('Enter your email, please');
+    send = false;
+  }
+
+  if (obj.age.value < 18) {
+    alert('Sorry, dude, you are too young');
+    send = false;
+  }
+
+  if (isNaN(obj.age.value)) {
+    alert('Sorry, your name is not a number');
+    send = false;
+  }
+
+  if (obj.message.value == '') {
+    alert('Write us something, please');
+    send = false;
+  }
+
+  return send;
   
 }
 
