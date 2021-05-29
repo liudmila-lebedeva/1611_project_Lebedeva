@@ -26,12 +26,12 @@ function doNext() {
   $('#img1').attr('src', 'images/' + images[current]);
   $('#container').css('margin-left', '0px');
   $('#img2').attr('src', 'images/' + images[next]);
- 
+  $("#b"+current).prop("checked", true);    // radio button corresponding to the current image
   rep = setTimeout(anim, 2000);
  
 }
 
-// === CHANGE pic ===
+// === CHANGE pic by user ===
 
 var radio = $('.radio-button');
 
@@ -40,14 +40,13 @@ for (i = 0; i < radio.length; i++) {
     $('#container').stop();
     clearTimeout(rep);
 
-    current = this.value;
+    current = this.value; //value of button = number of arr
     
     $('#img1').attr('src', 'images/' + images[this.value]);
     var next = (this.value + 1) % images.length;
     $('#img2').attr('src', 'images/' + images[next]);
     $('#container').css({
       'margin-left': '0px',
-
     });
     
     rep = setTimeout(anim, 2000);
@@ -57,9 +56,9 @@ for (i = 0; i < radio.length; i++) {
 /// menu scroll == ancor link ===
 
 $(document).ready(function(){
-  $( "a.scrollLink" ).click(function( event ) {
+  $('a.scrollLink').click(function( event ) {
       event.preventDefault();
-      $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 1000);
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
   })
 })
  
@@ -67,13 +66,7 @@ $(document).ready(function(){
 
 
 
-//Menu toggle-effect
-$(document).ready(function(){
-    $(".menu-icon").on("click",function(){
-      $("nav ul").toggleClass("showing");
-    });
-  });
-  
+
 //Scrolling Effect
 $(window).on('scroll', function(){
 if($(window).scrollTop()) {
